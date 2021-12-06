@@ -251,6 +251,18 @@ end TCL_Generic;
       <a name="label" val="Instruction"/>
       <a name="width" val="16"/>
     </comp>
+    <comp lib="0" loc="(280,180)" name="Constant">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(330,180)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(510,520)" name="Transistor">
+      <a name="facing" val="north"/>
+      <a name="type" val="n"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(600,120)" name="Pin">
       <a name="facing" val="south"/>
       <a name="label" val="Enable"/>
@@ -307,6 +319,14 @@ end TCL_Generic;
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="2" loc="(290,150)" name="BitSelector">
+      <a name="group" val="9"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(340,150)" name="BitSelector">
+      <a name="group" val="5"/>
+      <a name="width" val="9"/>
+    </comp>
     <comp lib="8" loc="(260,878)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Note 3: Imm32_Enable forces the use of the immediate for Rm register"/>
@@ -335,5 +355,85 @@ end TCL_Generic;
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="ALU will use Imm32 instead of Rm"/>
     </comp>
+    <comp loc="(370,420)" name="table_de_verite">
+      <a name="facing" val="south"/>
+    </comp>
+    <wire from="(190,150)" to="(260,150)"/>
+    <wire from="(280,160)" to="(280,180)"/>
+    <wire from="(290,150)" to="(310,150)"/>
+    <wire from="(330,160)" to="(330,180)"/>
+    <wire from="(340,150)" to="(370,150)"/>
+    <wire from="(370,150)" to="(370,200)"/>
+    <wire from="(370,150)" to="(510,150)"/>
+    <wire from="(370,420)" to="(370,710)"/>
+    <wire from="(370,710)" to="(670,710)"/>
+    <wire from="(510,150)" to="(510,520)"/>
+    <wire from="(510,560)" to="(590,560)"/>
+    <wire from="(590,540)" to="(590,560)"/>
+    <wire from="(590,540)" to="(670,540)"/>
+  </circuit>
+  <circuit name="table_de_verite">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="table_de_verite"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(190,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="opcode"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(220,40)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+    </comp>
+    <comp lib="0" loc="(540,40)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="codop"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="1" loc="(340,130)" name="NOT Gate"/>
+    <comp lib="1" loc="(340,90)" name="NOT Gate"/>
+    <comp lib="1" loc="(480,440)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <wire from="(190,90)" to="(200,90)"/>
+    <wire from="(200,40)" to="(200,90)"/>
+    <wire from="(200,40)" to="(220,40)"/>
+    <wire from="(230,290)" to="(500,290)"/>
+    <wire from="(230,60)" to="(230,90)"/>
+    <wire from="(230,90)" to="(230,290)"/>
+    <wire from="(230,90)" to="(310,90)"/>
+    <wire from="(240,130)" to="(240,340)"/>
+    <wire from="(240,130)" to="(310,130)"/>
+    <wire from="(240,340)" to="(510,340)"/>
+    <wire from="(240,60)" to="(240,130)"/>
+    <wire from="(250,450)" to="(450,450)"/>
+    <wire from="(250,60)" to="(250,450)"/>
+    <wire from="(340,130)" to="(380,130)"/>
+    <wire from="(340,90)" to="(370,90)"/>
+    <wire from="(370,430)" to="(450,430)"/>
+    <wire from="(370,90)" to="(370,430)"/>
+    <wire from="(380,130)" to="(380,390)"/>
+    <wire from="(380,390)" to="(520,390)"/>
+    <wire from="(480,440)" to="(530,440)"/>
+    <wire from="(500,60)" to="(500,290)"/>
+    <wire from="(510,60)" to="(510,340)"/>
+    <wire from="(520,60)" to="(520,390)"/>
+    <wire from="(530,60)" to="(530,440)"/>
+    <wire from="(540,40)" to="(560,40)"/>
+    <wire from="(560,40)" to="(560,90)"/>
+    <wire from="(560,90)" to="(570,90)"/>
   </circuit>
 </project>
