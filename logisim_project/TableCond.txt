@@ -1,0 +1,60 @@
+# Table de vérité
+# Générée à partir du circuit TableCond
+# Exportée dans Mon Dec 13 17:11:20 CET 2021
+
+# Conseils et remarques sur la mise en forme :
+# * Vous pouvez modifier ce fichier, puis le réimporter dans Logisim !
+# * Tout ce qui suit un '#' correspond à un commentaire et sera ignoré. 
+# * Lesl ignes vides et les lignes de séparation (par exemple : ~~~~~~) sont ignorées.
+# * Utilisez des noms de colonne simples (sans espaces, ni ponctuation, etc.)
+# * 'Nom[N..0]' indique une variable de N + 1 bits, alors que
+# 'Nom' tout seul indique une variable de 1 bit.
+# * Vous pouvez utiliser 'x' ou '-' pour indiquer "indifférent" pour les 
+# bits d'entrée et de sortie.
+# * Vous pouvez utiliser la notation binaire (par exemple, '10100011xxxx') ou 
+# ou hexadécimale (par exemple, 'C3x'). Logisim déterminera la notation utilisée.
+
+Code[3..0] N C Z V | Verified
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   0000    - - 0 - |    0    
+   0000    - - 1 - |    1    
+   0001    - - 0 - |    1    
+   0001    - - 1 - |    0    
+   0010    - 0 - - |    0    
+   0010    - 1 - - |    1    
+   0011    - 0 - - |    1    
+   0011    - 1 - - |    0    
+   0100    0 - - - |    0    
+   0100    1 - - - |    1    
+   0101    0 - - - |    1    
+   0101    1 - - - |    0    
+   0110    - - - 0 |    0    
+   0110    - - - 1 |    1    
+   0111    - - - 0 |    1    
+   0111    - - - 1 |    0    
+   1000    - 0 0 - |    0    
+   1000    - - 1 - |    0    
+   1000    - 1 0 - |    1    
+   1001    - 0 0 - |    1    
+   1001    - - 1 - |    1    
+   1001    - 1 0 - |    0    
+   1010    0 - - 0 |    1    
+   1010    0 - - 1 |    0    
+   1010    1 - - 0 |    0    
+   1010    1 - - 1 |    1    
+   1011    0 - - 0 |    0    
+   1011    0 - - 1 |    1    
+   1011    1 - - 0 |    1    
+   1011    1 - - 1 |    0    
+   1100    0 - 0 0 |    1    
+   1100    0 - 0 1 |    0    
+   1100    - - 1 - |    0    
+   1100    1 - 0 0 |    0    
+   1100    1 - 0 1 |    1    
+   1101    0 - 0 0 |    0    
+   1101    0 - 0 1 |    1    
+   1101    - - 1 - |    1    
+   1101    1 - 0 0 |    1    
+   1101    1 - 0 1 |    0    
+   1110    - - - - |    1    
+   1111    - - - - |    0    
