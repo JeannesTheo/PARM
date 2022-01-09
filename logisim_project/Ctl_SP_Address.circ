@@ -244,11 +244,12 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(280,220)" name="Constant">
       <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
       <a name="width" val="2"/>
     </comp>
     <comp lib="0" loc="(280,300)" name="Constant">
       <a name="facing" val="north"/>
-      <a name="value" val="0x8"/>
+      <a name="value" val="0x7"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(350,200)" name="Bit Extender">

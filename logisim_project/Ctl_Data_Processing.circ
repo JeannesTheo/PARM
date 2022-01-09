@@ -210,9 +210,9 @@ end TCL_Generic;
     <a name="clabelup" val="east"/>
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
-      <circ-port height="10" pin="530,100" width="10" x="265" y="115"/>
-      <circ-port height="10" pin="530,160" width="10" x="265" y="95"/>
-      <circ-port height="10" pin="530,220" width="10" x="265" y="75"/>
+      <circ-port height="10" pin="1160,100" width="10" x="265" y="115"/>
+      <circ-port height="10" pin="1160,220" width="10" x="265" y="75"/>
+      <circ-port height="10" pin="1230,170" width="10" x="265" y="95"/>
       <circ-port height="10" pin="530,280" width="10" x="265" y="55"/>
       <circ-port height="10" pin="720,330" width="10" x="265" y="135"/>
       <circ-port height="8" pin="180,170" width="8" x="46" y="56"/>
@@ -235,6 +235,24 @@ end TCL_Generic;
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="196" y="143">Flags_Update_Mask</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="85" y="84">Enable</text>
     </appear>
+    <comp lib="0" loc="(1160,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Rd"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1160,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Rm"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1230,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Rn"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
     <comp lib="0" loc="(180,170)" name="Pin">
       <a name="label" val="Instruction"/>
       <a name="width" val="16"/>
@@ -245,6 +263,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(310,200)" name="Constant">
       <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(310,320)" name="Constant">
@@ -271,23 +290,10 @@ end TCL_Generic;
       <a name="facing" val="south"/>
       <a name="label" val="Enable"/>
     </comp>
-    <comp lib="0" loc="(530,100)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="label" val="Rd"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(530,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="label" val="Rn"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(530,220)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="label" val="Rm"/>
-      <a name="output" val="true"/>
-      <a name="width" val="3"/>
+    <comp lib="0" loc="(490,260)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="OpCode"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(530,280)" name="Pin">
       <a name="facing" val="west"/>
@@ -300,11 +306,24 @@ end TCL_Generic;
       <a name="value" val="0x0"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(700,400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="OpCode"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(720,330)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Flags_Update_Mask"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="2" loc="(1110,230)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="2" loc="(1180,170)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="width" val="3"/>
     </comp>
     <comp lib="2" loc="(250,280)" name="BitSelector">
       <a name="group" val="6"/>
@@ -359,6 +378,26 @@ end TCL_Generic;
       <a name="text" val="Pull output low on Enable = 0"/>
     </comp>
     <comp loc="(600,340)" name="Table_de_Verite"/>
+    <comp loc="(970,400)" name="mvnEnable"/>
+    <wire from="(1040,160)" to="(1040,240)"/>
+    <wire from="(1040,160)" to="(1120,160)"/>
+    <wire from="(1040,240)" to="(1080,240)"/>
+    <wire from="(1070,180)" to="(1070,220)"/>
+    <wire from="(1070,180)" to="(1150,180)"/>
+    <wire from="(1070,220)" to="(1080,220)"/>
+    <wire from="(1090,250)" to="(1090,260)"/>
+    <wire from="(1090,260)" to="(1090,400)"/>
+    <wire from="(1090,260)" to="(1130,260)"/>
+    <wire from="(1110,230)" to="(1150,230)"/>
+    <wire from="(1120,100)" to="(1120,160)"/>
+    <wire from="(1120,100)" to="(1160,100)"/>
+    <wire from="(1120,160)" to="(1150,160)"/>
+    <wire from="(1130,200)" to="(1130,260)"/>
+    <wire from="(1130,200)" to="(1160,200)"/>
+    <wire from="(1150,220)" to="(1150,230)"/>
+    <wire from="(1150,220)" to="(1160,220)"/>
+    <wire from="(1160,190)" to="(1160,200)"/>
+    <wire from="(1180,170)" to="(1230,170)"/>
     <wire from="(180,170)" to="(190,170)"/>
     <wire from="(190,170)" to="(190,230)"/>
     <wire from="(190,170)" to="(290,170)"/>
@@ -390,12 +429,11 @@ end TCL_Generic;
     <wire from="(400,300)" to="(430,300)"/>
     <wire from="(400,350)" to="(660,350)"/>
     <wire from="(400,50)" to="(400,180)"/>
-    <wire from="(450,160)" to="(490,160)"/>
-    <wire from="(450,220)" to="(530,220)"/>
-    <wire from="(450,280)" to="(530,280)"/>
-    <wire from="(490,100)" to="(490,160)"/>
-    <wire from="(490,100)" to="(530,100)"/>
-    <wire from="(490,160)" to="(530,160)"/>
+    <wire from="(450,160)" to="(1040,160)"/>
+    <wire from="(450,220)" to="(1070,220)"/>
+    <wire from="(450,280)" to="(490,280)"/>
+    <wire from="(490,260)" to="(490,280)"/>
+    <wire from="(490,280)" to="(530,280)"/>
     <wire from="(590,340)" to="(600,340)"/>
     <wire from="(600,340)" to="(650,340)"/>
     <wire from="(610,310)" to="(610,320)"/>
@@ -403,6 +441,8 @@ end TCL_Generic;
     <wire from="(650,310)" to="(650,320)"/>
     <wire from="(650,320)" to="(650,330)"/>
     <wire from="(680,330)" to="(720,330)"/>
+    <wire from="(700,400)" to="(750,400)"/>
+    <wire from="(970,400)" to="(1090,400)"/>
   </circuit>
   <circuit name="Table_de_Verite">
     <a name="appearance" val="logisim_evolution"/>
@@ -552,5 +592,48 @@ end TCL_Generic;
     <wire from="(580,40)" to="(600,40)"/>
     <wire from="(600,40)" to="(600,90)"/>
     <wire from="(600,90)" to="(610,90)"/>
+  </circuit>
+  <circuit name="mvnEnable">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="mvnEnable"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(170,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="codop"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(200,40)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(480,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="enable"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(440,260)" name="AND Gate">
+      <a name="inputs" val="4"/>
+      <a name="size" val="30"/>
+    </comp>
+    <wire from="(170,90)" to="(180,90)"/>
+    <wire from="(180,40)" to="(180,90)"/>
+    <wire from="(180,40)" to="(200,40)"/>
+    <wire from="(210,240)" to="(410,240)"/>
+    <wire from="(210,60)" to="(210,240)"/>
+    <wire from="(220,250)" to="(410,250)"/>
+    <wire from="(220,60)" to="(220,250)"/>
+    <wire from="(230,270)" to="(410,270)"/>
+    <wire from="(230,60)" to="(230,270)"/>
+    <wire from="(240,280)" to="(410,280)"/>
+    <wire from="(240,60)" to="(240,280)"/>
+    <wire from="(440,260)" to="(460,260)"/>
+    <wire from="(460,90)" to="(460,260)"/>
+    <wire from="(460,90)" to="(480,90)"/>
   </circuit>
 </project>
