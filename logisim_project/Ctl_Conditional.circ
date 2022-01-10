@@ -210,13 +210,13 @@ end TCL_Generic;
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="247" y="57"/>
       <circ-port height="10" pin="680,110" width="10" x="245" y="55"/>
-      <circ-port height="10" pin="860,330" width="10" x="245" y="75"/>
+      <circ-port height="10" pin="940,340" width="10" x="245" y="75"/>
       <circ-port height="8" pin="210,140" width="8" x="46" y="76"/>
       <circ-port height="8" pin="260,340" width="8" x="46" y="96"/>
       <circ-port height="8" pin="260,360" width="8" x="46" y="116"/>
       <circ-port height="8" pin="260,380" width="8" x="46" y="136"/>
       <circ-port height="8" pin="260,400" width="8" x="46" y="156"/>
-      <circ-port height="8" pin="670,360" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="580,160" width="8" x="46" y="56"/>
       <rect fill="none" height="140" stroke="#000000" stroke-width="2" width="180" x="60" y="50"/>
       <rect height="20" stroke="none" width="180" x="60" y="170"/>
       <rect height="3" stroke="none" width="10" x="240" y="79"/>
@@ -307,9 +307,12 @@ end TCL_Generic;
       <a name="value" val="0x0"/>
       <a name="width" val="11"/>
     </comp>
-    <comp lib="0" loc="(670,360)" name="Pin">
+    <comp lib="0" loc="(580,160)" name="Pin">
       <a name="facing" val="north"/>
       <a name="label" val="Enable"/>
+    </comp>
+    <comp lib="0" loc="(610,150)" name="Tunnel">
+      <a name="label" val="E"/>
     </comp>
     <comp lib="0" loc="(680,110)" name="Pin">
       <a name="facing" val="west"/>
@@ -322,16 +325,33 @@ end TCL_Generic;
       <a name="value" val="0xbd"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(680,340)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="I"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(730,360)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0xc"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(770,240)" name="Tunnel">
       <a name="label" val="Imm8"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(860,330)" name="Pin">
+    <comp lib="0" loc="(830,380)" name="Tunnel">
+      <a name="label" val="E"/>
+    </comp>
+    <comp lib="0" loc="(940,340)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="Verified"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(810,330)" name="AND Gate">
+    <comp lib="1" loc="(820,330)" name="OR Gate">
+      <a name="negate1" val="true"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(860,340)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
     <comp lib="2" loc="(260,270)" name="BitSelector">
@@ -357,6 +377,9 @@ end TCL_Generic;
     <comp lib="2" loc="(600,110)" name="Multiplexer">
       <a name="enable" val="false"/>
       <a name="width" val="11"/>
+    </comp>
+    <comp lib="2" loc="(740,340)" name="BitSelector">
+      <a name="width" val="16"/>
     </comp>
     <comp lib="2" loc="(750,240)" name="Multiplexer">
       <a name="enable" val="false"/>
@@ -391,19 +414,22 @@ end TCL_Generic;
     <wire from="(530,120)" to="(570,120)"/>
     <wire from="(560,100)" to="(570,100)"/>
     <wire from="(560,70)" to="(560,100)"/>
-    <wire from="(580,130)" to="(580,270)"/>
-    <wire from="(580,270)" to="(670,270)"/>
+    <wire from="(580,130)" to="(580,150)"/>
+    <wire from="(580,150)" to="(580,160)"/>
+    <wire from="(580,150)" to="(610,150)"/>
     <wire from="(600,110)" to="(680,110)"/>
     <wire from="(630,320)" to="(730,320)"/>
-    <wire from="(670,270)" to="(670,340)"/>
-    <wire from="(670,340)" to="(670,360)"/>
-    <wire from="(670,340)" to="(780,340)"/>
     <wire from="(680,200)" to="(680,230)"/>
     <wire from="(680,230)" to="(720,230)"/>
+    <wire from="(680,340)" to="(710,340)"/>
     <wire from="(730,260)" to="(730,320)"/>
-    <wire from="(730,320)" to="(780,320)"/>
+    <wire from="(730,320)" to="(790,320)"/>
+    <wire from="(730,350)" to="(730,360)"/>
+    <wire from="(740,340)" to="(780,340)"/>
     <wire from="(750,240)" to="(770,240)"/>
-    <wire from="(810,330)" to="(860,330)"/>
+    <wire from="(820,330)" to="(830,330)"/>
+    <wire from="(830,350)" to="(830,380)"/>
+    <wire from="(860,340)" to="(940,340)"/>
   </circuit>
   <circuit name="TableCond">
     <a name="appearance" val="logisim_evolution"/>
