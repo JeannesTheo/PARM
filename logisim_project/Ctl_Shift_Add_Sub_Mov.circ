@@ -364,6 +364,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(860,610)" name="Pin">
       <a name="facing" val="west"/>
+      <a name="label" val="Imm32"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
@@ -457,7 +458,7 @@ end TCL_Generic;
     </comp>
     <comp loc="(360,680)" name="imm5_e"/>
     <comp loc="(620,380)" name="Rm_Rn_Rd"/>
-    <comp loc="(620,620)" name="Imm32"/>
+    <comp loc="(620,620)" name="Imm32Enable"/>
     <comp loc="(640,170)" name="Flags_table"/>
     <comp loc="(640,240)" name="carry_table"/>
     <comp loc="(640,300)" name="Im32_Enable_table"/>
@@ -907,9 +908,9 @@ end TCL_Generic;
     <wire from="(620,40)" to="(620,90)"/>
     <wire from="(620,90)" to="(630,90)"/>
   </circuit>
-  <circuit name="Imm32">
+  <circuit name="Imm32Enable">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Imm32"/>
+    <a name="circuit" val="Imm32Enable"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
