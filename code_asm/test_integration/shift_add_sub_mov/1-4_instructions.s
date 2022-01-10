@@ -14,5 +14,5 @@ subs r6, r0, #5
 asrs r6, r6, #1
 @r6 value should be -3 ou FFFFFFFD
 
-adds r7, r6, r1 
-@r7 value should be -2, FFFFFFFE 
+adds r7, r6, r1
+@r7 value should be -2, FFFFFFFE
